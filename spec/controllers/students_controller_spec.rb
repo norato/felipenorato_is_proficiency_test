@@ -43,7 +43,7 @@ RSpec.describe StudentsController, type: :controller do
   end
 
   describe 'PUT #update' do
-    let!(:student) { create :student, name: 'Student1', register_name: 'Register_name1', status: 1 }
+    let!(:student) { create :student, name: 'Student1', register_number: 'Register_number1', status: 1 }
     context 'valid attributes' do
       it 'located the requested @student' do
         put :update, id: student, student: FactoryGirl.attributes_for(:student)
@@ -52,11 +52,11 @@ RSpec.describe StudentsController, type: :controller do
       context "changes @student's attributes" do
         before do
           put :update, id: student,
-          student: FactoryGirl.attributes_for(:student, name: 'Student2', register_name: 'Register_name2', status: 0)
+          student: FactoryGirl.attributes_for(:student, name: 'Student2', register_number: 'Register_number2', status: 0)
           student.reload
         end
         it { student.name.should eq('Student2') }
-        it { student.register_name.should eq('Register_name2') }
+        it { student.register_number.should eq('Register_number2') }
         it { student.status.should eq(0) }
       end
     end
@@ -70,14 +70,14 @@ RSpec.describe StudentsController, type: :controller do
       context "does not change @student's attributes" do
         before do
           put :update, id: student,
-          student: FactoryGirl.attributes_for(:student, name: 'Student2', register_name: 'Register_name2', status: nil)
+          student: FactoryGirl.attributes_for(:student, name: 'Student2', register_number: 'Register_number2', status: nil)
           student.reload
         end
         it { student.name.should_not eq('Student2') }
-        it { student.register_name.should_not eq('Register_name2') }
+        it { student.register_number.should_not eq('Register_number2') }
         it { student.status.should_not eq(nil) }
         it { student.name.should eq('Student1') }
-        it { student.register_name.should eq('Register_name1') }
+        it { student.register_number.should eq('Register_number1') }
         it { student.status.should eq(1) }
       end
 

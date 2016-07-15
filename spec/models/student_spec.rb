@@ -4,7 +4,7 @@ RSpec.describe Student, type: :model do
   context 'Validations' do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :status }
-    it { is_expected.to validate_presence_of :register_name }
+    it { is_expected.to validate_presence_of :register_number }
   end
   context '#status' do
     let!(:student_active) { create :student }
