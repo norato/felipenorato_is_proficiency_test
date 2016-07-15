@@ -12,9 +12,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'slim-rails'
 gem 'faker'
-gem 'foundation-rails', '5.4.5'
 gem 'simple_form'
 gem 'enumerate_it'
+gem 'responders'
 gem 'font-awesome-rails'
 
 group :development, :test do
