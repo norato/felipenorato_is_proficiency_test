@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'slim-rails'
-gem 'faker',                       '~> 1.6.3'
+gem 'faker'
 gem 'foundation-rails', '5.4.5'
 gem 'simple_form'
 gem 'enumerate_it'

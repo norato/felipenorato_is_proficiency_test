@@ -265,7 +265,7 @@ DEPENDENCIES
   database_cleaner (~> 1.5.1)
   enumerate_it
   factory_girl_rails (= 4.5.0)
-  faker (~> 1.6.3)
+  faker
   font-awesome-rails
   foundation-rails (= 5.4.5)
   guard
