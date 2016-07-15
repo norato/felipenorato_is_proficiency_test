@@ -19,18 +19,25 @@ gem 'responders'
 gem 'font-awesome-rails'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug'# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'better_errors' # replaces the standard Rails error page with a much better and more useful error page
+  gem 'binding_of_caller' # add advanced feature to better_errors
+  gem 'pry-rails',                '~> 0.3.2'
+  gem 'xray-rails',               '0.1.18'
+  gem 'factory_girl_rails',       '4.5.0'
+  gem 'rspec-rails',              '~> 3.4.0'
+  gem 'spring-commands-rspec',    '~> 1.0.4'
 end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console'
-  gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+group :test do
+  gem 'database_cleaner',         '~> 1.5.1'
+  gem 'simplecov',                '~> 0.11.1', require: false
+  gem 'shoulda-matchers',         '~> 3.0.1'
+  gem 'timecop',                  '~> 0.8.0'
+  gem 'valid_attribute'
+  gem 'capybara'
+  gem 'poltergeist', '~> 1.9.0'
+  gem 'shoulda-kept-assign-to'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+ruby '2.3.0'
