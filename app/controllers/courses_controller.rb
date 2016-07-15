@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
   before_action :load_course, only: [:show, :edit, :update, :destroy]
 
   def index
-    @courses = Course.order(:name)
+    @courses = ng_bindable(Course.order(:name))
   end
 
   def new

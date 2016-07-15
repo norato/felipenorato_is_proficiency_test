@@ -16,6 +16,8 @@ gem 'enumerate_it'
 gem 'responders'
 gem 'font-awesome-rails'
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
+gem 'angular_sprinkles'
 
 group :development, :test do
   gem 'byebug'# Call 'byebug' anywhere in the code to stop execution and get a debugger console

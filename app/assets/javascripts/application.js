@@ -13,10 +13,39 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
+//= require angular_sprinkles
+//= require angular-rails-templates
+//= require_tree ./templates
 //= require_tree .
 
 (function () {
   'use strict';
 
-  var app = angular.module("APP", []);
+  sprinkles.directive('card', function(){
+    return {
+      scope: {
+        title : '=',
+        subtitle : '='
+      },
+      replace: false,
+      restrict: 'A',
+      template:'<div class="card">'
+            +     '<div class="body">'
+            +       '<p class="title">{{ title }}</p>'
+            +       '<p class="subtitle">{{ subtitle }}</p>'
+            +     '</div>'
+            +     '<div class="footer">'
+            +       '<div class="left-icons">'
+            +         '<i class="fa fa-users fw"></i>'
+            +         '<i class="fa fa-toggle-on fw"></i>'
+            +       '</div>'
+            +       '<div class="right-icons">'
+            +         '<i class="fa fa-pencil fw"></i>'
+            +         '<i class="fa fa-trash fw"></i>'
+            +       '</div>'
+            +     '</div>'
+            +  '</div>'
+    };
+  });
+
 })()

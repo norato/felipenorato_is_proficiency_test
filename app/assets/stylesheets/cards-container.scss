@@ -5,7 +5,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.card {
+[data-card=''] {
   width: 90%;
   max-width: 336px;
   border: 2px solid #6666FF;
@@ -20,7 +20,7 @@
       margin-top: 9px;
       margin-bottom: 5px;
     }
-    .description {
+    .subtitle {
       font-size: 0.8rem;
       margin-bottom: 5px;
     }
