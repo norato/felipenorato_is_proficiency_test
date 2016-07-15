@@ -24,8 +24,10 @@
   sprinkles.directive('card', function(){
     return {
       scope: {
-        title : '=',
-        subtitle : '='
+        title: '=',
+        subtitle: '=',
+        id: '=',
+        type: '='
       },
       replace: false,
       restrict: 'A',
@@ -40,11 +42,24 @@
             +         '<i class="fa fa-toggle-on fw"></i>'
             +       '</div>'
             +       '<div class="right-icons">'
-            +         '<i class="fa fa-pencil fw"></i>'
-            +         '<i class="fa fa-trash fw"></i>'
+            +         '<a ng-href="/{{ Url }}">'
+            +           '<i class="fa fa-pencil fw"></i>'
+            +         '</a>'
+            +         '<a ng-href="/{{ Url }}">'
+            +           '<i class="fa fa-trash fw"></i>'
+            +         '</a>'
             +       '</div>'
             +     '</div>'
-            +  '</div>'
+            +  '</div>',
+      link: function($scope) {
+
+        $scope.typeEnum = [ 'courses', 'students'];
+        $scope.Url = buildUrl();
+
+        function buildUrl() {
+          return [$scope.typeEnum[$scope.type], $scope.id].join('/');
+        }
+      }
     };
   });
 

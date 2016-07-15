@@ -6,18 +6,6 @@
     - @courses.each do |course|
       = ng_directive  :card,
                       title: course.bind(:name),
-                      subtitle: course.bind(:description)
-      / .card
-      /   .body
-      /     p.title = course.name
-      /     p.subtitle = course.description
-      /   .footer
-      /     .left-icons
-      /       = fa_icon 'users'
-      /       = fa_icon 'toggle-on'
-      /     .right-icons
-      /       = link_to course_path(course) do
-      /         = fa_icon 'pencil'
-      /       = link_to course_path(course), method: :delete do
-      /         = fa_icon 'trash'
-
+                      subtitle: course.bind(:description),
+                      id: course.bind(:id),
+                      type: 0
