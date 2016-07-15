@@ -1,3 +1,3 @@
 class Course < ActiveRecord::Base
-  validates_presence_of :name, :status
+  validates_presence_of :name, :status, :description
 end
