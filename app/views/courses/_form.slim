@@ -1,0 +1,7 @@
+.container
+  = simple_form_for @course, :validate => true do |f|
+    = f.input :name
+    = f.input :description
+    = f.input :status, as: :select, collection: Status.to_a
+    = f.submit class: "btn btn-success pull-right"
+  = link_to t(:back), courses_path
