@@ -27,6 +27,9 @@ group :development, :test do
   gem 'factory_girl_rails',       '4.5.0'
   gem 'rspec-rails',              '~> 3.4.0'
   gem 'spring-commands-rspec',    '~> 1.0.4'
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.2'
 end
 
 group :test do
