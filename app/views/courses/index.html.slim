@@ -1,19 +1,11 @@
 .container
   h1 = t('course.other', scope: 'activerecord.models')
 
+
   .cards-container
     - @courses.each do |course|
-      .card
-        .body
-          p.title = course.name
-          p.description = course.description
-        .footer
-          .left-icons
-            = fa_icon 'users'
-            = fa_icon 'toggle-on'
-          .right-icons
-            = link_to course_path(course) do
-              = fa_icon 'pencil'
-            = link_to course_path(course), method: :delete do
-              = fa_icon 'trash'
-
+      = ng_directive  :card,
+                      title: course.bind(:name),
+                      subtitle: course.bind(:description),
+                      id: course.bind(:id),
+                      type: 0

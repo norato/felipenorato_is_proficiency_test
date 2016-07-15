@@ -28,6 +28,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    angular-rails-templates (0.1.4)
+      railties (>= 3.1)
+      sprockets
+      tilt
+    angular_sprinkles (0.3.3)
+      angularjs-rails (~> 1)
+      rails (>= 3, < 5)
     angularjs-rails (1.5.6)
     arel (5.0.1.20140414130214)
     better_errors (2.1.1)
@@ -258,6 +265,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails-templates
+  angular_sprinkles
   angularjs-rails
   better_errors
   binding_of_caller
