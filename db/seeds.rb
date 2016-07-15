@@ -1,5 +1,6 @@
 Course.destroy_all
 Student.destroy_all
+Classroom.destroy_all
 
 10.times do
   Course.create!(
