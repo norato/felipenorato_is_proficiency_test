@@ -13,3 +13,13 @@ Student.destroy_all
     register_number: Faker::StarWars.droid
   )
 end
+
+10.times do |course|
+  5.times do |student|
+    Classroom.create!(
+      course: Course.all[course],
+      student: Student.all[student],
+      entry_at: Time.now
+    )
+  end
+end

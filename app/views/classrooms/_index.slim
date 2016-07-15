@@ -1,0 +1,14 @@
+- student_scope = 'activerecord.attributes.student'
+h1 = course.name
+table
+  thead
+    tr
+      th = t('name', scope: student_scope)
+      th = t('register_number', scope: student_scope)
+      th Entry_at
+  tbody
+    -@classroom.each do |classroom|
+      tr
+        td= classroom.student.name
+        td= classroom.student.register_number
+        td= classroom.entry_at
