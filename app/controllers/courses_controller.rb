@@ -34,6 +34,11 @@ class CoursesController < ApplicationController
     respond_with @course, location: courses_path
   end
 
+  def classroom
+    @course = Course.find(params[:course_id])
+    @classroom  = Classroom.findclass(params[:course_id])
+  end
+
   private
 
   def course_params
