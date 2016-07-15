@@ -1,7 +1,6 @@
 .container
   h1 = t('student.other', scope: 'activerecord.models')
 
-
   .cards-container
     - @students.each do |student|
       = ng_directive  :card,
