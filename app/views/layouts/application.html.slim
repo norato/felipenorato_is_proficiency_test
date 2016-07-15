@@ -12,6 +12,13 @@ html lang="pt-BR"
 
   body
 
+    nav
+      ul
+        li
+          = link_to t('course.other', scope: 'activerecord.models'), courses_path
+        li
+          = link_to t('student.other', scope: 'activerecord.models'), students_path
+
     == yield
 
     == yield :sprinkles
