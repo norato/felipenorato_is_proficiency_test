@@ -48,7 +48,7 @@
             +         '<a ng-href="/{{ Url }}">'
             +           '<i class="fa fa-pencil fw"></i>'
             +         '</a>'
-            +         '<a ng-href="/{{ Url }}">'
+            +         '<a data-method="delete" ng-href="/{{ Url }}">'
             +           '<i class="fa fa-trash fw"></i>'
             +         '</a>'
             +       '</div>'
