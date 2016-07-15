@@ -15,7 +15,6 @@ gem 'faker'
 gem 'foundation-rails', '5.4.5'
 gem 'simple_form'
 gem 'enumerate_it'
-gem 'responders'
 gem 'font-awesome-rails'
 
 group :development, :test do
