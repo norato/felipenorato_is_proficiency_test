@@ -1,0 +1,22 @@
+pt-BR:
+  activerecord:
+    models:
+      course:
+        one: "Curso"
+        other: "Cursos"
+      student:
+        one: "Aluno"
+        other: "Alunos"
+
+    attributes:
+      course:
+        name: "Nome"
+        description: "Descrição"
+        status: "Status"
+      student:
+        name: "Nome"
+        register_number: "Matrícula"
+        status: "Status"
+      classroom:
+        student: "Aluno"
+        entry_at: "Início"
