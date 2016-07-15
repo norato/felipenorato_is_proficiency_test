@@ -26,6 +26,7 @@
       scope: {
         title: '=',
         subtitle: '=',
+        status: '=',
         id: '=',
         type: '='
       },
@@ -38,8 +39,10 @@
             +     '</div>'
             +     '<div class="footer">'
             +       '<div class="left-icons">'
-            +         '<i class="fa fa-users fw"></i>'
-            +         '<i class="fa fa-toggle-on fw"></i>'
+            +         '<a ng-if="isCourse" ng-href="/{{ classroomUrl }}">'
+            +           '<i class="fa fa-users fw"></i>'
+            +         '</a>'
+            +         '<i class="fa fw" ng-class="statusIcon"></i>'
             +       '</div>'
             +       '<div class="right-icons">'
             +         '<a ng-href="/{{ Url }}">'
@@ -55,10 +58,26 @@
 
         $scope.typeEnum = [ 'courses', 'students'];
         $scope.Url = buildUrl();
+        $scope.isCourse = isCourse();
+        $scope.classroomUrl = buildClassroomUrl();
+        $scope.statusIcon = buildStatusIcon();
 
         function buildUrl() {
           return [$scope.typeEnum[$scope.type], $scope.id].join('/');
         }
+
+        function isCourse() {
+          return ($scope.type === 0) ? true : false;
+        }
+
+        function buildClassroomUrl() {
+          return [$scope.typeEnum[$scope.type], $scope.id, 'classrooms'].join('/');
+        }
+
+        function buildStatusIcon() {
+          return ($scope.status === 0) ? 'fa-toggle-off' : 'fa-toggle-on';
+        }
+
       }
     };
   });
