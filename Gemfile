@@ -43,4 +43,6 @@ group :test do
   gem 'shoulda-kept-assign-to'
 end
 
+gem 'rails_12factor', group: :production
+
 ruby '2.3.0'
