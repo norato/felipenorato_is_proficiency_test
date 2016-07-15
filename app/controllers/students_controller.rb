@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action :load_student, only: [:show, :edit, :update, :destroy]
 
   def index
-    @students = Student.order(:name)
+    @students = ng_bindable(Student.order(:name))
   end
 
   def new

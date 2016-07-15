@@ -1,0 +1,11 @@
+.container
+  h1 = t('student.other', scope: 'activerecord.models')
+
+
+  .cards-container
+    - @students.each do |student|
+      = ng_directive  :card,
+                      title: student.bind(:name),
+                      subtitle: student.bind(:register_number),
+                      id: student.bind(:id),
+                      type: 1
