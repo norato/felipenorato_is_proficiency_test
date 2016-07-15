@@ -11,6 +11,7 @@ module FelipenoratoIsProficiencyTest
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.autoload_paths << "#{Rails.root}/app/enumerations"
     config.time_zone = 'Brasilia'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
